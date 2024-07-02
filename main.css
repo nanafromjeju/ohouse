@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.coupon {
+  display: block;
+  position: relative;
+  z-index: 1000;
+}
+
+.coupon .left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: #4296ed;
+  left: 0;
+}
+
+.coupon .right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: #4296ed;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+.coupon .banner {
+  display: flex;
+  max-width: 1156px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.coupon .banner .center {
+  flex: 1 0 0;
+  background-image: url(image/banner.png);
+  background-color: #4296ed;
+  position: relative;
+  height: 50px;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.btn {
+  font-size: 20px;
+  color: white;
+  position: relative;
+  z-index: 10;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* 미디어쿼리 */
+
+@media only screen and (max-width: 768px) {
+  .coupon .left,
+  .coupon .right,
+  .coupon .banner .center,
+  .btn {
+    display: none; /* 화면 너비가 768px 이하일 때 숨김 */
+  }
+}
